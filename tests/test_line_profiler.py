@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import pytest
+from math import sin 
 
 def f(i):
     return i * 10
@@ -8,11 +10,13 @@ def g():
 
 
 
-def test_basic(line_profiler):
-    line_profiler(f)
-    line_profiler.runctx("g()", globals(), locals())
+
+@pytest.mark.line_profile.with_args(f, g)
+def test_as_mark():
+    g()
 
 
-def test_another(line_profiler):
-    line_profiler(g)
-    line_profiler.runctx("g()", globals(), locals())
+"""
+def test_via_command_line():
+    sin(1)
+"""
