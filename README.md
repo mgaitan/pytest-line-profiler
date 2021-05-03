@@ -11,8 +11,7 @@ line-by-line profiling for code executed by pytest, using [line-profiler](https:
 
 ## Why?
 
-Line profiler is a wonderful tool to easily identify bottlenecks inside specific functions of your code, and quantity
-the improvements after a refactor. 
+Line profiler is a wonderful tool to easily identify bottlenecks inside specific functions of your code, and quantify the improvements after a refactor. 
 
 Using it is straightforward but required to instrument the functions you want to profile with a "virtual" `@profile` decorator
 and then execute "a trigger script" (code that calls the decorated functions somehow) via `kernprof.py` which works as a python wrapper that understands the decorator, register the functions to be profiled, and print the stats when the script finishes.   
