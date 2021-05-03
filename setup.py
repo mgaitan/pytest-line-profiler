@@ -20,10 +20,11 @@ setup(
     license='MIT',
     url='https://github.com/mgaitan/pytest-line-profiler',
     description='Profile code executed by pytest',
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     py_modules=['pytest_line_profiler'],
     python_requires='>=3.6',
-    install_requires=['pytest>=3.5.0'],
+    install_requires=['pytest>=3.5.0', "line-profiler"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
@@ -47,3 +48,5 @@ setup(
         ],
     },
 )
+
+
