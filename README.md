@@ -111,7 +111,7 @@ detailed description.
   [PyPI version]: https://img.shields.io/pypi/v/pytest-line-profiler.svg
   [1]: https://pypi.org/project/pytest-line-profiler
   [Python versions]: https://img.shields.io/pypi/pyversions/pytest-line-profiler.svg
-  [See Build Status on Travis CI]: https://travis-ci.org/mgaitan/pytest-line-profiler.svg?branch=master
+  [See Build Status on Travis CI]: https://travis-ci.com/mgaitan/pytest-line-profiler.svg?branch=main
   [2]: https://travis-ci.org/mgaitan/pytest-line-profiler
   [pip]: https://pypi.org/project/pip/
   [PyPI]: https://pypi.org/project
