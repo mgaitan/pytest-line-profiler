@@ -1,11 +1,6 @@
 # pytest-line-profiler
 
-[![PyPI version][]][1]
-
-[![Python versions][]][1]
-
-[![See Build Status on Travis CI][]][2]
-
+[![PyPI version][]][1] [![Python versions][]][1] [![See Build Status on Travis CI][]][2]
 
 line-by-line profiling for code executed by pytest, using [line-profiler](https://github.com/pyutils/line_profiler).
 
