@@ -12,7 +12,7 @@ Using it is straightforward but required to instrument the functions you want to
 and then execute "a trigger script" (code that calls the decorated functions somehow) via `kernprof.py` which works as a python wrapper that understands the decorator, register the functions to be profiled, and print the stats when the script finishes.   
 
 Altought it does its job, is a bit invasive: you need to have an special "instrumented" version of your code, 
-and execute it in a way that potentially clashes with the way you do normally (for instance, through a shortcut command from your editor, another script, etc.)   
+and execute it in a way that potentially clashes with the way you do normally (for instance, through a shortcut command from your editor, a test runner, another script, etc.)   
 
 Moreover, frequently in real case scenarios, "a trigger script" isn't just a simple function call. 
 You need to prepare input data, connect to external resources, etc.  And that's exactly what a test can do, right?    
