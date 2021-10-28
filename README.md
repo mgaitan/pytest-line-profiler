@@ -33,7 +33,7 @@ like `@pytest.mark.line_profile.with_args(function1, function2, [...])`
 
 If your test exercises any of those functions, you'll get the profile result as a report.  
 
-For example, consider this example
+For example:
 
 ```python
 import pytest
