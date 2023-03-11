@@ -55,12 +55,12 @@ def pytest_runtest_call(item):
     
     if instrumented:
         lp = LineProfiler(*instrumented)
-        lp.runcall(item.runtest)
-        item.config._line_profile = getattr(item.config, "_line_profile", {})
-        item.config._line_profile[item.nodeid] = get_stats(lp)
-    else:
-        item.runtest()
-
+        item_runtest = item.runtest
+        def runtest():
+            lp.runcall(item_runtest)
+            item.config._line_profile = getattr(item.config, "_line_profile", {})
+            item.config._line_profile[item.nodeid] = get_stats(lp)
+        item.runtest = runtest
 
 
 def pytest_terminal_summary(
