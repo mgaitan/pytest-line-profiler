@@ -1,8 +1,8 @@
 # pytest-line-profiler
 
 [![tests](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/test.yml)
-[![PyPI version](https://img.shields.io/pypi/v/shbin)](https://pypi.org/project/pytest-line-profiler/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/shbin)](https://libraries.io/pypi/pytest-line-profiler)
+[![PyPI version](https://img.shields.io/pypi/v/pytest-line-profiler)](https://pypi.org/project/pytest-line-profiler/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/pytest-line-profiler)](https://libraries.io/pypi/pytest-line-profiler)
 
 
 line-by-line profiling for code executed by pytest, using [line-profiler](https://github.com/pyutils/line_profiler).
