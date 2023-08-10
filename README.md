@@ -84,7 +84,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 Alternatively, you can run any test passing the function/s to profile from the command line
 
 ```
-$ pytest --line-profile path.to.function_to_be profiled [...] 
+$ pytest --line-profile path.to.function_to_be_profiled [...] 
 ```
 
 
@@ -96,11 +96,11 @@ request.
 
 ## License
 
-Distributed under the terms of the [MIT][http://opensource.org/licenses/MIT] license,
+Distributed under the terms of the [MIT](http://opensource.org/licenses/MIT) license,
 "pytest-line-profiler" is free and open source software
 
 ## Issues
 
-If you encounter any problems, please [file an issue][https://github.com/mgaitan/pytest-line-profiler/issues] along with a
+If you encounter any problems, please [file an issue](https://github.com/mgaitan/pytest-line-profiler/issues) along with a
 detailed description.
   
