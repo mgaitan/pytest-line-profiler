@@ -1,6 +1,9 @@
 # pytest-line-profiler
 
-[![PyPI version][]][1] [![Python versions][]][1] [![See Build Status on Travis CI][]][2]
+[![tests](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/pytest.yml)
+[![PyPI version](https://img.shields.io/pypi/v/shbin)](https://pypi.org/project/pytest-line-profiler/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/shbin)](https://libraries.io/pypi/pytest-line-profiler)
+
 
 line-by-line profiling for code executed by pytest, using [line-profiler](https://github.com/pyutils/line_profiler).
 
@@ -19,7 +22,7 @@ You need to prepare input data, connect to external resources, etc.  And that's 
 
 ## Installation 
 
-You can install "pytest-line-profiler" via [pip][] from [PyPI][]:
+You can install "pytest-line-profiler" via pip from PyPI.
 
 ```
 $ pip install pytest-line-profiler
@@ -87,27 +90,17 @@ $ pytest --line-profile path.to.function_to_be profiled [...]
 
 ## Contributing
 
-Contributions are very welcome. Tests can be run with [pytest][], please
+Contributions are very welcome. Tests can be run with [pytest][https://github.com/pytest-dev/pytest], please
 ensure the coverage at least stays the same before you submit a pull
 request.
 
 ## License
 
-Distributed under the terms of the [MIT][] license,
+Distributed under the terms of the [MIT][http://opensource.org/licenses/MIT] license,
 "pytest-line-profiler" is free and open source software
 
 ## Issues
 
-If you encounter any problems, please [file an issue][] along with a
+If you encounter any problems, please [file an issue][https://github.com/mgaitan/pytest-line-profiler/issues] along with a
 detailed description.
-
-  [PyPI version]: https://img.shields.io/pypi/v/pytest-line-profiler.svg
-  [1]: https://pypi.org/project/pytest-line-profiler
-  [Python versions]: https://img.shields.io/pypi/pyversions/pytest-line-profiler.svg
-  [See Build Status on Travis CI]: https://travis-ci.com/mgaitan/pytest-line-profiler.svg?branch=main
-  [2]: https://travis-ci.org/mgaitan/pytest-line-profiler
-  [pip]: https://pypi.org/project/pip/
-  [PyPI]: https://pypi.org/project
-  [pytest]: https://github.com/pytest-dev/pytest
-  [MIT]: http://opensource.org/licenses/MIT
-  [file an issue]: https://github.com/mgaitan/pytest-line-profiler/issues
+  

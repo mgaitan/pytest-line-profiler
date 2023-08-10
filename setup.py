@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
 from pathlib import Path
 from setuptools import setup
 
@@ -23,7 +22,7 @@ setup(
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     py_modules=['pytest_line_profiler'],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     install_requires=['pytest>=3.5.0', "line-profiler"],
     classifiers=[
         'Development Status :: 4 - Beta',
