@@ -1,6 +1,6 @@
 # pytest-line-profiler
 
-[![tests](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/pytest.yml)
+[![tests](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/mgaitan/pytest-line-profiler/actions/workflows/test.yml)
 [![PyPI version](https://img.shields.io/pypi/v/shbin)](https://pypi.org/project/pytest-line-profiler/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/shbin)](https://libraries.io/pypi/pytest-line-profiler)
 
