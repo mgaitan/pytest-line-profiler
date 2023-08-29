@@ -19,9 +19,28 @@ def import_string(dotted_path):
     if not isinstance(dotted_path, str):
         return dotted_path
     try:
-        module_path, callable_name = dotted_path.rsplit('.', 1)
-        module = import_module(module_path)
-        callable_object = getattr(module, callable_name)
+        components = dotted_path.split('.')
+
+        # Identify the longest valid module path
+        for i in range(len(components), 0, -1):
+            try:
+                module = import_module('.'.join(components[:i]))
+                break
+            except ModuleNotFoundError:
+                continue
+        else:
+            raise ModuleNotFoundError(f"No module matches the given dotted path: {dotted_path}")
+
+        remaining_components = components[i:]
+
+        # Traverse the remaining components to get to the function or method
+        callable_object = module
+        for comp in remaining_components:
+            try:
+                callable_object = getattr(callable_object, comp)
+            except AttributeError:
+                raise AttributeError(f"Component {comp} not found in {callable_object}")
+
         assert callable(callable_object)
         return callable_object
     except (ModuleNotFoundError, ValueError, AttributeError, AssertionError):
