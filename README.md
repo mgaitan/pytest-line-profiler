@@ -87,6 +87,15 @@ Alternatively, you can run any test passing the function/s to profile from the c
 $ pytest --line-profile path.to.function_to_be_profiled [...] 
 ```
 
+The `line-profiler` library offer flexibility to change the output time units, to change the default output time unit you can set `output_unit` in the function decorator.
+For example: 
+```python
+
+@pytest.mark.line_profile.with_args(f, g, output_unit=1e-3)
+def test_as_mark():
+    assert g() == 450
+
+```
 
 ## Contributing
 

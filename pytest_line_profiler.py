@@ -6,9 +6,9 @@ from importlib import import_module
 from line_profiler import LineProfiler
 
 
-def get_stats(lp: LineProfiler) -> str:
+def get_stats(lp: LineProfiler, output_unit: float=1e-3) -> str:
     s = io.StringIO()
-    lp.print_stats(stream=s)
+    lp.print_stats(stream=s, output_unit=output_unit)
     return s.getvalue()
 
 
@@ -52,14 +52,16 @@ def pytest_runtest_call(item):
         instrumented += [import_string(s) for s in item.get_closest_marker("line_profile").args]
     if item.config.getvalue("line_profile"):
         instrumented += [import_string(s) for s in item.config.getvalue("line_profile")]
-    
+
+    output_unit = item.get_closest_marker("line_profile").kwargs.get('output_unit', 1e-3)
+
     if instrumented:
         lp = LineProfiler(*instrumented)
         item_runtest = item.runtest
         def runtest():
             lp.runcall(item_runtest)
             item.config._line_profile = getattr(item.config, "_line_profile", {})
-            item.config._line_profile[item.nodeid] = get_stats(lp)
+            item.config._line_profile[item.nodeid] = get_stats(lp, output_unit=output_unit)
         item.runtest = runtest
 
 
